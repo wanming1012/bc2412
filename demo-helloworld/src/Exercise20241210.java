@@ -14,5 +14,10 @@ public class Exercise20241210 {
 
     double averageScore = (mathScore + englishScore + historyScore) / 3.0;
     System.out.println(averageScore);
+
+    byte b = 127;
+    b = b + (byte)1;  // why error?  byte + byte => byte?
+    System.out.println(b);
+
   }
 }
