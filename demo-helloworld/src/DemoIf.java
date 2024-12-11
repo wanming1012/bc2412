@@ -10,6 +10,15 @@ public class DemoIf {
       System.out.println("You are adult");
     }
 
+    // test case
+    // M/F 0  => F
+    // M/F 70 => C
+    // M/F 80 => B
+    // M   85 => B
+    // F   85 => T
+    // M   87 => T
+    // M/F 90 => A
+
     char grade = ' ';
     int score = 87;
     char gender = 'M';
