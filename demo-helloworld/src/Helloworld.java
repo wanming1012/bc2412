@@ -12,5 +12,12 @@ public class Helloworld {
         double x1 = 10.0 / 3.0;
 
         System.out.println(x1);
+
+        char a1 = 97;
+        char a2 = 65;
+        char a3 = '溫';
+        System.out.println(a1);
+        System.out.println(a2);
+        System.out.println(a3);
     }
 }

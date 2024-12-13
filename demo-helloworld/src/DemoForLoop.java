@@ -83,5 +83,30 @@ public class DemoForLoop {
     }
 
     System.out.println(sum);
+
+    String str3 = "hello";
+    int numOfChar = 0;
+    for (int i = 0; i < str3.length(); i++) {
+      if (str3.charAt(i) == 'a')
+        numOfChar++;
+    }
+    System.out.println(numOfChar);
+
+    for (int i = 1; i <= 100; i++) {
+      if (i % 3 != 0 || i % 4 != 0)
+        continue;
+      
+      System.out.println(i);
+    }
+
+    for (int i = 0; i < 10; i++) {
+      for (int j = 0; j < 10 - i; j++) {
+        System.out.print(" ");
+      }
+      for (int j = -i + 1; j < i; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
   }
 }
