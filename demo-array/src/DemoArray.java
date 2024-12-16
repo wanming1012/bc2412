@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DemoArray {
     public static void main(String[] args) throws Exception {
         int[] arr = new int[3];
@@ -61,5 +63,61 @@ public class DemoArray {
                 max = arr5[i];
         }
         System.out.println(max);
+
+        int[] arr7 = new int[] {9, -8, 109, 99, 98};
+        for (int i = 0; i < arr7.length - 1; i++) {
+            if (arr7[i] > arr7[i + 1]) {
+                int temp = arr7[i];
+                arr7[i] = arr7[i + 1];
+                arr7[i + 1] = temp;
+            }
+        }
+        System.out.println(Arrays.toString(arr7));
+
+        Integer[] arr8 = new Integer[] {4, 3, 9, 2};
+        Integer result = 1;
+        for (Integer i = 0; i < arr8.length; i++) {
+            result *= arr8[i];
+        }
+
+        System.out.println(result);
+
+        String str = "hello";
+        char[] arr9 = str.toCharArray();
+        System.out.println(arr9.toString());
+
+        for (int i = 0; i < arr9.length; i++)
+            arr9[i]++;
+
+        for (int i = 0; i < arr9.length; i++)
+            System.out.println(arr9[i]);
+
+        char[] arr12 = new char[] {'p', 'a', 'p', 'b', 'a', 'p'};
+        int maxNumChar = 0;
+        char maxChar = 0;
+        for (char c = 0; c < Character.MAX_VALUE; c++) {
+            int numChar = 0;
+            for (int i = 0; i < arr12.length; i++) {
+                if (arr12[i] == c)
+                    numChar++;
+            }
+            if (numChar > maxNumChar) {
+                maxNumChar = numChar;
+                maxChar = c;
+            }
+        }
+        System.out.println(maxChar + ", " + maxNumChar);
+
+        maxNumChar = 0;
+        maxChar = 0;
+        int[] numChar = new int[Character.MAX_VALUE];
+        for (int i = 0; i < arr12.length; i++) {
+            numChar[arr12[i]]++;
+            if (numChar[arr12[i]] > maxNumChar) {
+                maxNumChar = numChar[arr12[i]];
+                maxChar = arr12[i];
+            }
+        }
+        System.out.println(maxChar + ", " + maxNumChar);
     }
 }
