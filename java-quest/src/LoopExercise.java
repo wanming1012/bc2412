@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class LoopExercise {
@@ -178,12 +179,17 @@ public class LoopExercise {
     }
     System.out.println("Max=" + max + ", Min=" + min);
 
-    // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.5
+    // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.6
     System.out.println("---------------------------");
-    float[] arr16 = new float[] {0.2f, 0.3f, 0.5f};
+    float[] arr16 = new float[] {0.2f, 0.3f, 0.6f};
 
     // 17. Add value 0.1 to each of value in array arr16
-    // Print: [0.3, 0.4, 0.6]
+    // Print: [0.3, 0.4, 0.7]
+    BigDecimal bigTemp = new BigDecimal("0.1");
+    for (int i = 0; i < arr16.length; i++) {
+      BigDecimal value = new BigDecimal(Float.toString(arr16[i]));
+      arr16[i] = value.add(bigTemp).floatValue();
+    }
     System.out.println(Arrays.toString(arr16));
 
     // 18. Count the number of target strings in the String[]
