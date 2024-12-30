@@ -19,5 +19,8 @@ public class Helloworld {
         System.out.println(a1);
         System.out.println(a2);
         System.out.println(a3);
+
+        byte i = 127;
+        System.out.println(i < 128);
     }
 }
