@@ -14,14 +14,16 @@ public class Library {
     this.books = newBooks;
   }
 
-  public Book removeByTitle(String title) {
+  public int getNumOfBooks() {
+    return this.books.length;
+  }
+
+  public void removeBook(Book book) {
     Book[] newBooks = new Book[this.books.length - 1];
-    Book book = null;
     boolean found = false;
     int index = 0;
     for (int i = 0; i < this.books.length; i++) {
-      if (!found && title.equals(this.books[i].getTitle())) {
-        book = this.books[i];
+      if (!found && this.books[i] == book) {
         found = true;
       }
       else {
@@ -29,7 +31,6 @@ public class Library {
       }
     }
     this.books = newBooks;
-    return book;
   }
 
   public Book[] searchByTitle(String title) {
