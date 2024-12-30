@@ -36,7 +36,7 @@ public class Library {
     Book[] tempList = new Book[this.books.length];
     int index = 0;
     for (int i = 0; i < this.books.length; i++) {
-      if (title.equals(this.books[i].getTitle())) {
+      if (this.books[i].getTitle().indexOf(title) != -1) {
         tempList[index++] = this.books[i];
       }
     }
@@ -69,7 +69,7 @@ public class Library {
       System.out.println(removedBook.getTitle() + ", " + removedBook.getAuthor());
     }
 
-    for (Book book : library.searchByTitle("Learn Java")) {
+    for (Book book : library.searchByTitle("Java")) {
       System.out.println(book.getTitle() + ", " + book.getAuthor());
     }
   }
