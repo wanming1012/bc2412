@@ -1,4 +1,4 @@
-public class Dog extends Animal {
+public class Dog extends Animal implements KeepAlive {
   
   public Dog(String name) {
     super(name);
@@ -6,5 +6,15 @@ public class Dog extends Animal {
 
   public void walk() {
     System.out.println("Dog " + getName() + " is walking ...");
+  }
+
+  @Override 
+  public void sleep() {
+    System.out.println("Dog " + getName() + " is sleeping ...");
+  }
+
+  @Override
+  public void drink() {
+    System.out.println("Dog " + getName() + " is drinking ...");
   }
 }
