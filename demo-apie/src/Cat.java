@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Cat extends Animal implements Walkable, Sleepable {
+public class Cat extends Animal2 implements Walkable, Sleepable {
     private int age;
 
     public Cat(String name, int age) {

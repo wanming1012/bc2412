@@ -1,10 +1,10 @@
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Square extends Shape {
+public class Square2 extends Shape2 {
   private double length;
 
-  public Square(double length, Color color) {
+  public Square2(double length, Color color) {
     super(color);
     this.length = length;
   }
@@ -18,10 +18,10 @@ public class Square extends Shape {
     if (this == obj)
       return true;
 
-    if (!(obj instanceof Square))
+    if (!(obj instanceof Square2))
       return false;
 
-    Square square = (Square) obj;
+    Square2 square = (Square2) obj;
     return Objects.equals(this.length, square.getLength());
   }
 

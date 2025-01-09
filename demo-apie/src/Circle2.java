@@ -1,10 +1,10 @@
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Circle extends Shape {
+public class Circle2 extends Shape2 {
   private double radius;
 
-  public Circle(double radius, Color color) {
+  public Circle2(double radius, Color color) {
     super(color);
     this.radius = radius;
   }
@@ -18,10 +18,10 @@ public class Circle extends Shape {
     if (this == obj)
       return true;
 
-    if (!(obj instanceof Circle))
+    if (!(obj instanceof Circle2))
       return false;
 
-    Circle circle = (Circle) obj;
+    Circle2 circle = (Circle2) obj;
     return Objects.equals(this.radius, circle.getRadius());
   }
 
@@ -44,28 +44,28 @@ public class Circle extends Shape {
   }
 
   public static void main(String[] args) {
-    Circle c1 = new Circle(3.0, Color.RED);
+    Circle2 c1 = new Circle2(3.0, Color.RED);
     System.out.println(c1.area());
     System.out.println(c1.getColor());
     System.out.println(c1.getRadius());
     System.out.println(c1);
     System.out.println(c1.hashCode());
 
-    Circle c2 = new Circle(3.0, Color.RED);
+    Circle2 c2 = new Circle2(3.0, Color.RED);
     System.out.println(c2);
     System.out.println(c2.hashCode());
     System.out.println(c1.equals(c2));
 
-    Square s1 = new Square(3.0, Color.RED);
+    Square2 s1 = new Square2(3.0, Color.RED);
     System.out.println(s1);
     System.out.println(s1.hashCode());
 
-    Shape[] shapes = new Shape[3];
-    shapes[0] = Shape.create('C');
-    shapes[1] = Shape.create('S');
-    shapes[2] = Shape.create('T');
+    Shape2[] shapes = new Shape2[3];
+    shapes[0] = Shape2.create('C');
+    shapes[1] = Shape2.create('S');
+    shapes[2] = Shape2.create('T');
 
-    for (Shape shape : shapes)
+    for (Shape2 shape : shapes)
       System.out.println("Area of " + shape.toString() + " = " + shape.area());
   }
 }

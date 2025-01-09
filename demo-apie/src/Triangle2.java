@@ -1,11 +1,11 @@
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Triangle extends Shape {
+public class Triangle2 extends Shape2 {
   private double base;
   private double height;
 
-  public Triangle(double base, double height, Color color) {
+  public Triangle2(double base, double height, Color color) {
     super(color);
     this.base = base;
     this.height = height;
@@ -24,10 +24,10 @@ public class Triangle extends Shape {
     if (this == obj)
       return true;
 
-    if (!(obj instanceof Triangle))
+    if (!(obj instanceof Triangle2))
       return false;
 
-    Triangle triangle = (Triangle) obj;
+    Triangle2 triangle = (Triangle2) obj;
     return Objects.equals(this.base, triangle.getBase())
       && Objects.equals(this.height, triangle.getHeight());
   }

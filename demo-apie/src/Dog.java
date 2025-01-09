@@ -1,4 +1,4 @@
-public class Dog extends Animal implements KeepAlive {
+public class Dog extends Animal2 implements KeepAlive {
   
   public Dog(String name) {
     super(name);

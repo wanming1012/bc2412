@@ -1,23 +1,23 @@
-public abstract class Shape {
+public abstract class Shape2 {
   private Color color;
 
-  public static Shape create(char ref) {
+  public static Shape2 create(char ref) {
     switch (ref) {
       case 'S':
-        return new Square(3.0, Color.RED);
+        return new Square2(3.0, Color.RED);
       
       case 'C':
-        return new Circle(1.1, Color.YELLOW);
+        return new Circle2(1.1, Color.YELLOW);
 
       case 'T':
-        return new Triangle(1.2, 3, Color.BLUE);
+        return new Triangle2(1.2, 3, Color.BLUE);
 
       default:
         return null;
     }
   }
 
-  public Shape(Color color) {
+  public Shape2(Color color) {
     this.color = color;
   }
 
