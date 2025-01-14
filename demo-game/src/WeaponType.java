@@ -1,11 +1,9 @@
-enum Role {
-  ARCHER("Archer"),
-  MAGE("Mage"),
-  WARRIOR("Warrior");
+public enum WeaponType {
+  BOW("Bow"), SWORD("Sword"), STAVE("Stave");
 
   private String description;
 
-  private Role(String description) {
+  private WeaponType(String description) {
     this.description = description;
   }
 
