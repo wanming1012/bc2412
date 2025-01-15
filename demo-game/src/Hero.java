@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Hero {
   private static long nextId = 0;
@@ -12,15 +13,15 @@ public abstract class Hero {
   //private Weapon weapon;
   private static final int MAX_LEVEL = 5;
   //private Skill skill;
-  protected static final HashMap<Role, Integer> CD_MULTIPLIER = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> MAX_HP = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> MAX_MP = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> PA = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> PD = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> MA = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> MD = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> AG = new HashMap<>();
-  protected static final HashMap<Role, Integer[]> CC = new HashMap<>();
+  protected static final Map<Role, Integer> CD_MULTIPLIER = new HashMap<>();
+  protected static final Map<Role, Integer[]> MAX_HP = new HashMap<>();
+  protected static final Map<Role, Integer[]> MAX_MP = new HashMap<>();
+  protected static final Map<Role, Integer[]> PA = new HashMap<>();
+  protected static final Map<Role, Integer[]> PD = new HashMap<>();
+  protected static final Map<Role, Integer[]> MA = new HashMap<>();
+  protected static final Map<Role, Integer[]> MD = new HashMap<>();
+  protected static final Map<Role, Integer[]> AG = new HashMap<>();
+  protected static final Map<Role, Integer[]> CC = new HashMap<>();
   //protected static final HashMap<Role, Integer[]> CD = new HashMap<>();
 
   public Hero(Role role) {
