@@ -1,7 +1,10 @@
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DemoStream {
   public static void main(String[] args) {
@@ -77,6 +80,24 @@ public class DemoStream {
 
     List<String> newFruits2 = fruits.stream().distinct().collect(Collectors.toList());
     System.out.println(newFruits2);
+
+    Stream.of("abc", "def");
+    Stream<Book> books3 = Stream.of(new Book("abc"), new Book("def"));
+
+    //books3.filter(e -> e.getName().contains("a")).collect(Collectors.toList());
+
+    Optional<Book> targetBookBox = books3.filter(e -> "abc".equals(e.getName())).findFirst();
+
+    if (targetBookBox.isPresent()) {
+      Book targetBook = targetBookBox.get();
+      System.out.println(targetBook.getName());
+    }
+
+    targetBookBox.ifPresent(e -> {
+      System.out.println(e.getName());
+    });
+
+    Book test = targetBookBox.orElse(new Book("ijk"));
 }
 
   public static class Book {
