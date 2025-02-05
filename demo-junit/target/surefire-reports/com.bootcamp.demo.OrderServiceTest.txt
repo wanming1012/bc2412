@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: com.bootcamp.demo.OrderServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1.003 s <<< FAILURE! - in com.bootcamp.demo.OrderServiceTest
+testOrder2  Time elapsed: 0.052 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.bootcamp.demo.OrderServiceTest.testOrder2(OrderServiceTest.java:69)
+  2. -> at com.bootcamp.demo.OrderServiceTest.testOrder2(OrderServiceTest.java:70)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+testOrder4  Time elapsed: 0.004 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.bootcamp.demo.OrderServiceTest.testOrder4(OrderServiceTest.java:46)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+testOrder5  Time elapsed: 0.003 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:56)
+  2. -> at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:57)
+  3. -> at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:58)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+

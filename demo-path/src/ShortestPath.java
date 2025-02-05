@@ -20,9 +20,16 @@ public class ShortestPath {
         Path.addPath('J', 'C', 1);
         
 
-        System.out.println(Path.paths);
         System.out.println(Path.findShortestPath('A', 'C'));
         
     }
+
+    // A -> B = 3
+    // B -> C = 7
+    // A -> Y = 2
+    // Y -> C = 4
+    // A -> I = 1
+    // I -> J = 2
+    // J -> C = 3
     
 }

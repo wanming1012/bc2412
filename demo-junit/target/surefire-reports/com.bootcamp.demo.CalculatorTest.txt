@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.bootcamp.demo.CalculatorTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.028 s <<< FAILURE! - in com.bootcamp.demo.CalculatorTest
-testMethodB  Time elapsed: 0.006 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <23> but was: <24>
-	at com.bootcamp.demo.CalculatorTest.testMethodB(CalculatorTest.java:24)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.bootcamp.demo.CalculatorTest

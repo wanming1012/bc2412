@@ -1,2 +1,5 @@
-com\bootcamp\demo\CalculatorTest.class
 com\bootcamp\demo\StaffTest.class
+com\bootcamp\demo\CalculatorPerMethodTest.class
+com\bootcamp\demo\OrderServiceTest.class
+com\bootcamp\demo\CalculatorTest.class
+com\bootcamp\demo\CalculatorPerClassTest.class

@@ -1,2 +1,5 @@
-com\bootcamp\demo\Staff.class
+com\bootcamp\demo\PaymentService.class
 com\bootcamp\demo\Calculator.class
+com\bootcamp\demo\OrderService.class
+com\bootcamp\demo\Staff.class
+com\bootcamp\demo\InventoryService.class

@@ -1,25 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Deck {
-  private Card[] cards;
+  private final List<Card> cards;
 
   public Deck() {
-    cards = new Card[Card.RANKS.length * Card.SUITES.length];
-    int idx = 0;
-    for (char suite : Card.SUITES) {
-      for (char rank : Card.RANKS) {
-        cards[idx++] = new Card(rank, suite);
+    this.cards = new ArrayList<>();
+    for (Suite suite : Suite.values()) {
+      for (Rank rank : Rank.values()) {
+        this.cards.add(new Card(rank, suite));
       }
     }
   }
 
   public Card getCard(int index) {
-    return this.cards[index];
+    return this.cards.get(index);
+  }
+
+  @Override
+  public String toString() {
+    return this.cards.toString();
   }
 
   public static void main(String[] args) {
     Deck deck = new Deck();
 
-    for (int i = 0; i < 52; i++) {
-      deck.getCard(i).print();
-    }
+    System.out.println(deck);
   }
 }

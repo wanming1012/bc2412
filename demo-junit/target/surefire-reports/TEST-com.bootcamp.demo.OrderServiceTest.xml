@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bootcamp.demo.CalculatorTest" time="0" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.bootcamp.demo.OrderServiceTest" time="1.003" tests="5" errors="3" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,7 +58,39 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testSum" classname="com.bootcamp.demo.CalculatorTest" time="0"/>
-  <testcase name="testSum2" classname="com.bootcamp.demo.CalculatorTest" time="0"/>
-  <testcase name="testMethodB" classname="com.bootcamp.demo.CalculatorTest" time="0"/>
+  <testcase name="testOrder" classname="com.bootcamp.demo.OrderServiceTest" time="0.931"/>
+  <testcase name="testOrder2" classname="com.bootcamp.demo.OrderServiceTest" time="0.052">
+    <error message="&#10;Unnecessary stubbings detected.&#10;Clean &amp; maintainable test code requires zero unnecessary code.&#10;Following stubbings are unnecessary (click to navigate to relevant line of code):&#10;  1. -&gt; at com.bootcamp.demo.OrderServiceTest.testOrder2(OrderServiceTest.java:69)&#10;  2. -&gt; at com.bootcamp.demo.OrderServiceTest.testOrder2(OrderServiceTest.java:70)&#10;Please remove unnecessary stubbings or use &apos;lenient&apos; strictness. More info: javadoc for UnnecessaryStubbingException class." type="org.mockito.exceptions.misusing.UnnecessaryStubbingException"><![CDATA[org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.bootcamp.demo.OrderServiceTest.testOrder2(OrderServiceTest.java:69)
+  2. -> at com.bootcamp.demo.OrderServiceTest.testOrder2(OrderServiceTest.java:70)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+]]></error>
+  </testcase>
+  <testcase name="testOrder3" classname="com.bootcamp.demo.OrderServiceTest" time="0.005"/>
+  <testcase name="testOrder4" classname="com.bootcamp.demo.OrderServiceTest" time="0.004">
+    <error message="&#10;Unnecessary stubbings detected.&#10;Clean &amp; maintainable test code requires zero unnecessary code.&#10;Following stubbings are unnecessary (click to navigate to relevant line of code):&#10;  1. -&gt; at com.bootcamp.demo.OrderServiceTest.testOrder4(OrderServiceTest.java:46)&#10;Please remove unnecessary stubbings or use &apos;lenient&apos; strictness. More info: javadoc for UnnecessaryStubbingException class." type="org.mockito.exceptions.misusing.UnnecessaryStubbingException"><![CDATA[org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.bootcamp.demo.OrderServiceTest.testOrder4(OrderServiceTest.java:46)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+]]></error>
+  </testcase>
+  <testcase name="testOrder5" classname="com.bootcamp.demo.OrderServiceTest" time="0.003">
+    <error message="&#10;Unnecessary stubbings detected.&#10;Clean &amp; maintainable test code requires zero unnecessary code.&#10;Following stubbings are unnecessary (click to navigate to relevant line of code):&#10;  1. -&gt; at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:56)&#10;  2. -&gt; at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:57)&#10;  3. -&gt; at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:58)&#10;Please remove unnecessary stubbings or use &apos;lenient&apos; strictness. More info: javadoc for UnnecessaryStubbingException class." type="org.mockito.exceptions.misusing.UnnecessaryStubbingException"><![CDATA[org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:56)
+  2. -> at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:57)
+  3. -> at com.bootcamp.demo.OrderServiceTest.testOrder5(OrderServiceTest.java:58)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+]]></error>
+  </testcase>
 </testsuite>

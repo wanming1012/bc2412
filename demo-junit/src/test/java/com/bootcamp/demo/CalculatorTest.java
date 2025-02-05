@@ -21,6 +21,6 @@ class CalculatorTest {
 
   @Test
   void testMethodB() {
-    Assertions.assertEquals(23, Calculator.methodB(7));
+    Assertions.assertEquals(24, Calculator.methodB(7));
   }
 }

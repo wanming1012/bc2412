@@ -6,6 +6,7 @@ public class Path {
   private char id;
   private final Map<Path, Integer> distances = new HashMap<>();
   public static final Map<Character, Path> paths = new HashMap<>();
+  public static final Map<Path, Path> reversePaths = new HashMap<>();
   
   public Path(char id) {
     this.id = id;
@@ -48,8 +49,10 @@ public class Path {
         distance += entry.getValue().intValue();
       }
 
-      if (minDistance == -1 || distance < minDistance)
+      if (minDistance == -1 || distance < minDistance) {
         minDistance = distance;
+        reversePaths.put(dest, this);
+      }
     }
     return minDistance;
   }
@@ -74,7 +77,20 @@ public class Path {
     if (from == null || dest == null)
       return -1;
     
-    return from.findShortestPath(destId);
+    int distance = from.findShortestPath(destId);
+
+    Path current = dest;
+    StringBuilder shortestPath = new StringBuilder();
+    do {
+      if (shortestPath.length() > 0)
+        shortestPath.insert(0, " -> ");
+
+      shortestPath.insert(0, current.getId());
+      current = reversePaths.get(current);
+    } while (current != null);
+    System.out.println(shortestPath);
+
+    return distance;
   }
 
   @Override
