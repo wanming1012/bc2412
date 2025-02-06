@@ -76,7 +76,7 @@ public class DistanceManager {
       }
       minCostMap.put(start, 0);
       pQueue.add(start);
-      int minDistance = Integer.MAX_VALUE;
+      int minDistance = Integer.MAX_VALUE;  // matthew: added to record shortest distance
 
       while (!pQueue.isEmpty()) {
         String current = pQueue.poll();
@@ -89,10 +89,10 @@ public class DistanceManager {
           String nextNode = neighbor.getKey();
           int newDist = minCostMap.get(current) + neighbor.getValue();
           if (nextNode.equals(end) && newDist < minDistance) {
-            minDistance = newDist;
+            minDistance = newDist;  // matthew: update shotest distance if end point found
           }
 
-          if (newDist < minCostMap.get(nextNode) && newDist <= minDistance) {
+          if (newDist < minCostMap.get(nextNode) && newDist <= minDistance) {  // matthew: do not search path if current distance is already larger than shortest distance
             minCostMap.put(nextNode, newDist);
             previousMap.put(nextNode, current);
             pQueue.add(nextNode);
